@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>MealDb Website</title>
+  </head>
+  <body class="bg-dark">
+    <header class="bg-white">
+        <div class=" d-flex justify-content-between p-3 container">
+            <div>
+                <h3>Tasty HUT</h3>
+            </div>
+            <div>
+                <button class="btn btn-warning fw-bold">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <section style="background:url(img/banner_1.png); height: 500px; opacity: 0.7;"             class="text-center d-flex justify-content-center align-items-center">
+        <div class="border-2 border-warning" id="banner-section">
+            <div class="text-white text-center border-2 border-warning" >
+                <h1 class="text-white">Taste Our Delicious <br> Best Foods</h1>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have <br> suffered alteration in some form, by injected humou.</p>
+            </div>
+            <div>
+                <input id="text-field" type="text" placeholder="Search Meal">
+                <button onclick="btnSearch()" class="btn-warning">Search</button>
+            </div>
+        </div>
+    </section>   
+
+    <section class="bg-white container py-5">
+        <div>
+            <h2 class="text-center text-dark mb-4">Your Favourite Food</h2>
+        </div>
+    </section>
+
+    <section class="bg-white container">
+        <div>
+            <div id="meal-container" class="row row-cols-1 row-cols-md-3 g-4">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="no-food-found" class="d-none bg-white container pb-3">
+        <div>
+            <h1 class="text-danger text-center">No Result Found ! Try Another Search</h1>
+        </div>
+    </section>
+
+    <section id="btn-show" class="bg-white d-none">
+        <div class="text-center">
+            <button onclick="showButton()" class="btn btn-danger  my-2">Show All</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="modal fade" id="mealDetailsModal" tabindex="-1" aria-labelledby="mealDetailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mealDetailsModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="modal-body" class="modal-body">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/mealDB.js"></script>
+  </body>
+</html>
